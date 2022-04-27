@@ -1,0 +1,99 @@
+use("prayerLocator");
+db.locations.drop()
+db.locations.insertMany([
+  {
+  "Name": "Birmingham New Street Station",
+  "Location": "2 Station St, Birmingham B5 4DY",
+  "Description": "Prayer room located near Birmingham New Street station. You can find the prayer room in-between Cafe Nero and the Left Luggage area.",
+  "pictures": [{"name": "Entrance", "url": "https://i2-prod.birminghammail.co.uk/incoming/article14558412.ece/ALTERNATES/s615b/A-sign-for-the-Multi-Faith-Room-close-to-Left-Luggage.jpg"}],
+  "googleMaps": "djshfkas",
+  "openingTimes": "dskldsa",
+  "Facilities" : ["ghjkd", "dnsjkagha"],
+  "geometry": {
+        "type": "Point",
+        "coordinates": [52.4771305, -1.8995473]
+      }
+},
+ 
+
+{
+   "Name": "International Convention Centre Prayer Room",
+  "Location": "Broad St, Birmingham B1 2EA",
+  "Description": "The Prayer Room is located on Level 3, along the main corridor as you enter via the Brindleyplace Level 3 entrance.",
+  "pictures": [{"name": "Entrance", "url": "https://www.premierinn.com/content/dam/pi/websites/desktop/guides/birmingham/birmingham-icc-500x320.jpg"}],
+  "googleMaps": "djshfkas",
+  "openingTimes": "dskldsa",
+  "Facilities" : ["ghjkd", "dnsjkagha"],
+  "geometry": {
+        "type": "Point",
+        "coordinates": [52.478868, -1.910789]
+      }
+},
+{
+   "Name": "Birmingham Children's Hospital Prayer Room",
+  "Location": "Steel House Ln, Birmingham B4 6NH",
+  "Description": "Prayer room located in the Birminghams Children Hospital, a Muslim prayer room on the first floor opposite the chaplaincy office",
+  "pictures": [{"name": "Entrance", "url": "https://www.baptist-heartofengland.org/wp-content/uploads/2019/05/heba_bchc-300x225.jpg"}],
+  "googleMaps": "djshfkas",
+  "openingTimes": "dskldsa",
+  "Facilities" : ["ghjkd", "dnsjkagha"],
+  "geometry": {
+        "type": "Point",
+        "coordinates": [52.484784, -1.893808]
+      }
+},
+{
+  "Name": " Millenium Point Prayer Room",
+  "Location": "Curzon St, Birmingham B4 7XG",
+  "Description": "Prayer room located on the third floor, open to both men and women",
+  "pictures": [{"name": "Entrance", "url":"https://www.millenniumpoint.org.uk/wp-content/uploads/2021/07/Millennium-Point-Birmingham-768x512-1.jpeg" }],
+  "googleMaps": "djshfkas",
+  "openingTimes": "dskldsa",
+  "Facilities" : ["ghjkd", "dnsjkagha"],
+  "geometry": {
+        "type": "Point",
+        "coordinates": [52.482793, -1.885955]
+      }
+},
+{
+   "Name": " Birmingham City Hospital  Prayer Room",
+  "Location": "Dudley Rd, Birmingham B18 7QH",
+  "Description": "A Muslim prayer room on the first floor opposite the chaplaincy office. ",
+  "pictures": [{"name": "Entrance", "url": "https://i2-prod.birminghammail.co.uk/incoming/article15838165.ece/ALTERNATES/s615/2_CITYHOSPITAL-16.jpg"}],
+  "googleMaps": "djshfkas",
+  "openingTimes": "dskldsa",
+  "Facilities" : ["ghjkd", "dnsjkagha"],
+  "geometry": {
+        "type": "Point",
+        "coordinates": [52.488627, -1.932507]
+      }
+},
+{
+   "Name": " Birmingham Heartlands Hospital",
+  "Location": "Bordesley Green East, Birmingham B9 5SS",
+  "Description": "The Faith Centre and Quiet Room, open 24 hours",
+  "pictures": [{"name": "Entrance", "url": "https://i2-prod.birminghammail.co.uk/incoming/article7624103.ece/ALTERNATES/s1200c/Heartlands-hospital.jpg"}],
+  "googleMaps": "djshfkas",
+  "openingTimes": "dskldsa",
+  "Facilities" : ["ghjkd", "dnsjkagha"],
+  "geometry": {
+        "type": "Point",
+        "coordinates": [52.480218, -1.829966]
+      }
+},
+
+{
+   "Name": " Queen Elizabeth Hospital Birmingham",
+  "Location": "Mindelsohn Way, Birmingham B15 2GW",
+  "Description": "The Faith and Community Centre is located on Level 1 of the QEHB, near the Main Entrance. ",
+  "pictures": [{"name": "Entrance", "url": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/07/28/13/queen-elizabeth2.jpg?width=1200"}],
+  "googleMaps": "djshfkas",
+  "openingTimes": "dskldsa",
+  "Facilities" : ["ghjkd", "dnsjkagha"],
+  "geometry": {
+        "type": "Point",
+        "coordinates": [52.453198, -1.93847]
+      }
+}
+
+])

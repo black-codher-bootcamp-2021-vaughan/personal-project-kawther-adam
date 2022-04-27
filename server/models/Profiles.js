@@ -2,9 +2,17 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const profileSchema = new Schema({
-  first_name: String,
-  last_name: String,
-  location: String,
+  Name: String,
+  Location: String,
+  Description: String,
+  pictures: [{name: String, url: String}],
+  googleMaps: String,
+  openingTimes: String,
+  Facilities: [String],
+  Geometry: {
+    type: String,
+    coordinates: [Number]
+      }
 });
 
-mongoose.model("profiles", profileSchema);
+mongoose.model("locations", profileSchema);
