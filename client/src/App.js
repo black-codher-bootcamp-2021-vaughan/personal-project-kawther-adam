@@ -4,9 +4,9 @@ import About from "./components/About";
 import Search from "./components/Search";
 import Map from "./components/Map";
 import ReactMapGl, { Marker, Popup } from "react-map-gl";
-
 // SERVICES THAT CALL OUR API ENDPOINTS
 import { getAllProfiles } from "./services/profileService";
+
 
 function App() {
   const [profiles, setProfiles] = useState(null);
@@ -21,8 +21,11 @@ function App() {
 
     getProfiles();
   }, [profiles]);
+  
 
-  const renderProfile = (user) => {
+
+
+  function renderProfile(user) {
     return (
       <p key={user._id}>
         <h3>{user.Name} </h3>
@@ -34,7 +37,7 @@ function App() {
         <p>{user.Description}</p>
       </p>
     );
-  };
+  }
 
   return (
     <Router>
@@ -56,6 +59,7 @@ function App() {
       />
       <Route exact path="/about" render={() => <About />} />
       <Route exact path="/Map" render={() => <Map profiles={profiles} />} />
+    
       {/* <BasketTotal /> */}
     </Router>
   );
