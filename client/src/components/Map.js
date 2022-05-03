@@ -19,7 +19,7 @@ function Map(props) {
         longitude: -1.898075,
         zoom: 14,
       }}
-      style={{ width: 800, height: 600 }}
+      style={{ width: "100%", height: 600 }}
       mapStyle="mapbox://styles/mapbox/streets-v9"
       mapboxAccessToken={MAPBOX_TOKEN}
     

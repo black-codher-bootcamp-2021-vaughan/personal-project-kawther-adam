@@ -12,7 +12,7 @@ function ProfileMarker(props) {
         <img
           src="/images/prayer-icon.png"
           width="50px"
-          alt="Prayer Icon"
+          alt="Prayer Icon"  
           onClick={(e) => {
             e.preventDefault();
             setShowPopup(!showPopup);
