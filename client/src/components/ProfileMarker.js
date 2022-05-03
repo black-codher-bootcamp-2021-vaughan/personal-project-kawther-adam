@@ -7,6 +7,7 @@ function ProfileMarker(props) {
 
   return (
     <>
+
       <Marker longitude={longitude} latitude={latitude} color={color}>
         <img
           src="/images/prayer-icon.png"
@@ -18,6 +19,7 @@ function ProfileMarker(props) {
           }}
         />
       </Marker>
+     
       {showPopup && (
         <Popup
           longitude={longitude}
@@ -36,6 +38,7 @@ function ProfileMarker(props) {
           </p>
         </Popup>
       )}
+    
     </>
   );
 }

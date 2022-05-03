@@ -6,6 +6,7 @@ import Map from "./components/Map";
 import ReactMapGl, { Marker, Popup } from "react-map-gl";
 // SERVICES THAT CALL OUR API ENDPOINTS
 import { getAllProfiles } from "./services/profileService";
+import { UserContact} from './components/UserContact';
 
 
 function App() {
@@ -21,16 +22,13 @@ function App() {
 
     getProfiles();
   }, [profiles]);
-  
-
-
 
   function renderProfile(user) {
     return (
       <p key={user._id}>
         <h3>{user.Name} </h3>
         {user.pictures.map((picture) => (
-          <img src={picture.url} />
+          <img src={picture.url} width="200px" />
         ))}
 
         <p> {user.Location}</p>
@@ -45,8 +43,12 @@ function App() {
         exact
         path="/"
         render={() => (
+       
           <div>
             <Search />
+            <div className="MAP">
+              <Map profiles={profiles} />
+            </div>
             <ul>
               {profiles && profiles.length > 0 ? (
                 profiles.map((profile) => renderProfile(profile))
@@ -54,12 +56,14 @@ function App() {
                 <p>No profiles found</p>
               )}
             </ul>
+         
           </div>
         )}
       />
       <Route exact path="/about" render={() => <About />} />
-      <Route exact path="/Map" render={() => <Map profiles={profiles} />} />
-    
+      <Route exact path="/contact" render={() =>  <UserContact/>}
+   />   
+     
       {/* <BasketTotal /> */}
     </Router>
   );
