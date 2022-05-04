@@ -3,6 +3,7 @@ import FormUserContact from './FormUserContact';
 import FormPersonalContact from './FormPersonalContact';
 import Confirm from './Confirm';
 import Success from './Success';
+import NavBar from './NavBar';
 
 export class UserContact extends Component {
   state = {
@@ -44,11 +45,10 @@ export class UserContact extends Component {
     switch (step) {
       case 1:
         return (
-          <FormUserContact
+          <><NavBar /><FormUserContact
             nextStep={this.nextStep}
             handleChange={this.handleChange}
-            values={values}
-          />
+            values={values} /></>
         );
       case 2:
         return (

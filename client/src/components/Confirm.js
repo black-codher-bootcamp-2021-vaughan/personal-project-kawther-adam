@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { List, ListItem, ListItemText } from '@material-ui/core/';
 import Button from '@material-ui/core/Button';
+import NavBar from './NavBar';
 
 export class Confirm extends Component {
   continue = e => {
@@ -22,7 +23,7 @@ export class Confirm extends Component {
       values: { firstName, lastName, email, occupation, city, bio }
     } = this.props;
     return (
-      <MuiThemeProvider>
+      <><NavBar /><MuiThemeProvider>
         <>
           <Dialog
             open
@@ -65,7 +66,7 @@ export class Confirm extends Component {
             >Confirm & Continue</Button>
           </Dialog>
         </>
-      </MuiThemeProvider>
+      </MuiThemeProvider></>
     );
   }
 }

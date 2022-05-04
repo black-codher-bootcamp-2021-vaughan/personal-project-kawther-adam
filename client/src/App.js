@@ -48,9 +48,9 @@ function App() {
         render={() => (
           <div>
        
-            <NavBar/>
+            <NavBar />
             
-            <Container sx={{ width: "100%", paddingTop: "50px"}}>
+            <Container sx={{ width: "200%", paddingTop: "50px"}}>
               <Grid container spacing={2}>
               
                 <Grid item xs={6}>

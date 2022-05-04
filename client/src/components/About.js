@@ -1,23 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import NavBar from "./NavBar";
 
-const About = (props) => {
+const About = () => {
   return (
+ 
     <div className="header">
-      <h1>About</h1>
-      <div className="breadcrumb">
-        <Link to="/"> Home </Link> |<Link to="/about"> About </Link> |
-        <Link to="/basket" className="productLink">
-       PrayerList ({props.bookLength})
-        </Link>
+        <NavBar/>
       </div>
-      <div className="page">
-        <h1>
-          {" "}
-          ...........{" "}
-        </h1>
-      </div>
-    </div>
+    
   );
 };
 

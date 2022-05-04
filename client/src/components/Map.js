@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from "react";
-import ReactMapGl, { Marker, Popup, GeolocateControl, NavigationControl } from "react-map-gl";
+import ReactMapGl, {
+  Marker,
+  Popup,
+  GeolocateControl,
+  NavigationControl,
+} from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import ProfileMarker from "./ProfileMarker";
 // import Direction from "./Direction";
-
 
 const MAPBOX_TOKEN =
   "pk.eyJ1Ijoia2F3dGhlci1hZGFtIiwiYSI6ImNsMmV0MDl6cDAyeWEzYmtqM2RrYzZqdnAifQ.3fhbL55o18a4Q0FmeBL9ow";
 
 function Map(props) {
   const { profiles } = props;
-
 
   return (
     <ReactMapGl
@@ -19,10 +22,15 @@ function Map(props) {
         longitude: -1.898075,
         zoom: 14,
       }}
-      style={{ width: "100%", height: 600 }}
+      style={{
+        width: "100%",
+        height: "800px",
+        marginTop: "10px",
+        borderRadius: 40,
+        overflow: "hidden",
+      }}
       mapStyle="mapbox://styles/mapbox/streets-v9"
       mapboxAccessToken={MAPBOX_TOKEN}
-    
     >
       {profiles &&
         profiles.map((profile) => (
@@ -30,12 +38,12 @@ function Map(props) {
             longitude={profile.geometry.coordinates[1]}
             latitude={profile.geometry.coordinates[0]}
             color="red"
-            user ={profile}
+            user={profile}
           />
         ))}
-{/* <Direction/> */}
-<GeolocateControl/>
-<NavigationControl/>
+      {/* <Direction/> */}
+      <GeolocateControl />
+      <NavigationControl />
     </ReactMapGl>
   );
 }

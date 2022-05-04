@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import NavBar from './NavBar';
 
 export class FormPersonalContact extends Component {
   continue = e => {
@@ -19,7 +20,7 @@ export class FormPersonalContact extends Component {
   render() {
     const { values, handleChange } = this.props;
     return (
-      <MuiThemeProvider>
+      <><NavBar /><MuiThemeProvider>
         <>
           <Dialog
             open
@@ -33,8 +34,7 @@ export class FormPersonalContact extends Component {
               onChange={handleChange('occupation')}
               defaultValue={values.occupation}
               margin="normal"
-              fullWidth
-            />
+              fullWidth />
             <br />
             <TextField
               placeholder="Enter Your City"
@@ -42,8 +42,7 @@ export class FormPersonalContact extends Component {
               onChange={handleChange('city')}
               defaultValue={values.city}
               margin="normal"
-              fullWidth
-            />
+              fullWidth />
             <br />
             <TextField
               placeholder="Enter Your Bio"
@@ -51,8 +50,7 @@ export class FormPersonalContact extends Component {
               onChange={handleChange('bio')}
               defaultValue={values.bio}
               margin="normal"
-              fullWidth
-            />
+              fullWidth />
             <br />
 
             <Button
@@ -68,7 +66,7 @@ export class FormPersonalContact extends Component {
             >Continue</Button>
           </Dialog>
         </>
-      </MuiThemeProvider>
+      </MuiThemeProvider></>
     );
   }
 }
