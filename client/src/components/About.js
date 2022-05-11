@@ -1,12 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import ControlledCarousel from "./ControlledCarousel";
 import NavBar from "./NavBar";
+
+
 
 const About = () => {
   return (
  
     <div className="header">
         <NavBar/>
+        <ControlledCarousel/>
+
       </div>
     
   );

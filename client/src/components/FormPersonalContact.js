@@ -29,10 +29,10 @@ export class FormPersonalContact extends Component {
           >
             <AppBar title="Enter Personal Details" />
             <TextField
-              placeholder="Enter Your Occupation"
-              label="Occupation"
-              onChange={handleChange('occupation')}
-              defaultValue={values.occupation}
+              placeholder="Enter postcode"
+              label="Postcode"
+              onChange={handleChange('postcode')}
+              defaultValue={values.postcode}
               margin="normal"
               fullWidth />
             <br />
@@ -41,14 +41,6 @@ export class FormPersonalContact extends Component {
               label="City"
               onChange={handleChange('city')}
               defaultValue={values.city}
-              margin="normal"
-              fullWidth />
-            <br />
-            <TextField
-              placeholder="Enter Your Bio"
-              label="Bio"
-              onChange={handleChange('bio')}
-              defaultValue={values.bio}
               margin="normal"
               fullWidth />
             <br />

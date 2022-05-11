@@ -10,6 +10,8 @@ import NavBar from "./components/NavBar";
 import Container from "@mui/material/Container";
 import Card from "./components/Card";
 import { Grid, Stack } from "@mui/material";
+import { List } from "@material-ui/core";
+
 
 function App() {
   const [profiles, setProfiles] = useState(null);
@@ -47,21 +49,32 @@ function App() {
         path="/"
         render={() => (
           <div>
-       
             <NavBar />
-            
-            <Container sx={{ width: "200%", paddingTop: "50px"}}>
+
+            <Container sx={{ width: "200%", paddingTop: "50px" }}>
               <Grid container spacing={2}>
-              
-                <Grid item xs={6}>
-                  <Stack spacing={2}>
-                    {profiles && profiles.length > 0 ? (
-                      profiles.map((profile) => <Card profile={profile}></Card>)
-                    ) : (
-                      <p>No profiles found</p>
-                    )}
-                  </Stack>
+                <Grid item xs={6} sx= {{overflowY: "scroll",
+                      maxHeight: "800px",}}>
+                  <List
+                    sx={{
+                      width: "100%",
+
+                      position: "relative",
+                      
+                    }}
+                  >
+                    <Stack spacing={2}>
+                      {profiles && profiles.length > 0 ? (
+                        profiles.map((profile) => (
+                          <Card profile={profile}></Card>
+                        ))
+                      ) : (
+                        <p>No profiles found</p>
+                      )}
+                    </Stack>
+                  </List>
                 </Grid>
+
                 <Grid item xs={6}>
                   <Map profiles={profiles} />
                 </Grid>

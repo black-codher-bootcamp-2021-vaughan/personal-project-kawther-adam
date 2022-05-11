@@ -26,20 +26,12 @@ export class FormUserContact extends Component {
               placeholder="Enter Your First Name"
               label="First Name"
               onChange={handleChange('firstName')}
-              defaultValue={values.firstName}
+              defaultValue={values.Name}
               margin="normal"
               fullWidth
             />
             <br />
-            <TextField
-              placeholder="Enter Your Last Name"
-              label="Last Name"
-              onChange={handleChange('lastName')}
-              defaultValue={values.lastName}
-              margin="normal"
-              fullWidth
-            />
-            <br />
+         
             <TextField
               placeholder="Enter Your Email"
               label="Email"

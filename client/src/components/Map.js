@@ -35,8 +35,8 @@ function Map(props) {
       {profiles &&
         profiles.map((profile) => (
           <ProfileMarker
-            longitude={profile.geometry.coordinates[1]}
-            latitude={profile.geometry.coordinates[0]}
+            longitude={profile.geometry.longitude}
+            latitude={profile.geometry.latitude}
             color="red"
             user={profile}
           />

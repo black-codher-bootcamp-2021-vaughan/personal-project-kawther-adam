@@ -8,7 +8,7 @@ export const Success =()=> {
 
   
     return (
-    <><NavBar /><>
+    <><NavBar />
         <Dialog
           open={open}
           fullWidth
@@ -21,7 +21,7 @@ export const Success =()=> {
             close me
           </button>
         </Dialog>
-      </></>
+      </>
     
     );
   }

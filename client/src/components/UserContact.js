@@ -39,8 +39,8 @@ export class UserContact extends Component {
 
   render() {
     const { step } = this.state;
-    const { firstName, lastName, email, occupation, city, bio } = this.state;
-    const values = { firstName, lastName, email, occupation, city, bio };
+    const { firstName, lastName, email, postcode, city, bio } = this.state;
+    const values = { firstName, lastName, email, postcode, city, bio };
 
     switch (step) {
       case 1:
