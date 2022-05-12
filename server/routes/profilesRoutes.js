@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
-const Profile = mongoose.model("profiles");
+const Profile = mongoose.model("locations");
 
 const profileRoutes = (app) => {
-  app.get(`/api/profile`, async (req, res) => {
+  app.get(`/api/kawther`, async (req, res) => {
     const profiles = await Profile.find();
 
     return res.status(200).send(profiles);
   });
 
-  app.post(`/api/profile`, async (req, res) => {
+  app.post(`/api/kawther`, async (req, res) => {
     const profile = await Profile.create(req.body);
 
     return res.status(201).send({

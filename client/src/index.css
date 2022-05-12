@@ -5,9 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.MuiDialog-paper {
+  padding: 15px;
+}
+
+button.MuiButton-containedSecondary {
+  margin-bottom: 10px;
+}
+
+
+
