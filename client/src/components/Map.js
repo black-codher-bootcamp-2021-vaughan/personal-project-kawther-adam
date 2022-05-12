@@ -24,10 +24,13 @@ function Map(props) {
       }}
       style={{
         width: "100%",
-        height: "800px",
-        marginTop: "10px",
-        borderRadius: 40,
+        height: "100%",
         overflow: "hidden",
+        position: "left",
+        padding: "30px",
+        marginTop:"10px",
+
+     
       }}
       mapStyle="mapbox://styles/mapbox/streets-v9"
       mapboxAccessToken={MAPBOX_TOKEN}

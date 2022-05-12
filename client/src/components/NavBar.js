@@ -61,7 +61,7 @@ export default function NavBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position="sticky"
-        style={{ backgroundColor: "green", padding: "5px" }}
+        style={{ backgroundColor: "#5AC69F", padding: "5px" }}
       >
         <Toolbar>
           <IconButton

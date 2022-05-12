@@ -3,7 +3,7 @@ import { Grid, ListItemText, ListSubheader, Paper, Typography } from "@mui/mater
 import { Box } from "@mui/system";
 import React from "react";
 import List from "@mui/material/List";
-
+import { styles } from "@material-ui/core/styles/withStyles";
 
 
 function Card(props) {
@@ -18,16 +18,19 @@ function Card(props) {
       elevation={6}
       className="paper"
       style={{
-        // height: 200,
+        
         color: "black",
-        marginTop: "10px",
-        borderRadius: 40,
+      
+    
         overflow: "hidden",
         backgroundColor: "#white",
+        width: 550,
+        Media: { width: '100%'},
+        position: "centre",
       }}
     >
         {profile.pictures.map((picture) => (
-          <img src={picture.url} width="600px" />
+          <img src={picture.url}    width="550px" />
         ))}
 
         <Box

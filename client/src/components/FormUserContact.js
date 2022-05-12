@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import image from "./pastel-gradient.png";
 
 export class FormUserContact extends Component {
   continue = e => {
@@ -14,6 +15,7 @@ export class FormUserContact extends Component {
   render() {
     const { values, handleChange } = this.props;
     return (
+     <div style={{ backgroundImage: `url(${image})` }}>
       <MuiThemeProvider>
         <>
           <Dialog
@@ -48,7 +50,9 @@ export class FormUserContact extends Component {
             >Continue</Button>
           </Dialog>
         </>
+        
       </MuiThemeProvider>
+      </div>
     );
   }
 }
